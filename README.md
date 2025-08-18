@@ -1,1 +1,1 @@
-Homepod - Storipod Admin Platform
+MSC Official Website
