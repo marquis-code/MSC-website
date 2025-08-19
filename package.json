@@ -2,7 +2,7 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/ricardobalk/nuxt3-tailwindcss.git"
+    "url": "https://github.com/marquis-code/MSC-website.git"
   },
   "scripts": {
     "dev": "nuxt dev",
@@ -35,7 +35,6 @@
     "@vueuse/motion": "^3.0.3",
     "@vueuse/nuxt": "^13.1.0",
     "axios": "^1.6.8",
-    "lucide-vue-next": "^0.475.0",
     "moment": "^2.30.1",
     "nuxt-simple-sitemap": "^4.4.1",
     "postcss-custom-properties": "^13.3.6",

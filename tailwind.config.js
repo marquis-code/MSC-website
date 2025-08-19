@@ -1,5 +1,5 @@
-const plugin = require('tailwindcss/plugin');
-const colors = require("tailwindcss/colors")
+const plugin = require("tailwindcss/plugin");
+const colors = require("tailwindcss/colors");
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -9,15 +9,16 @@ module.exports = {
     "./plugins/**/*.{js,ts}",
     "./nuxt.config.{js,ts}",
     "./app.vue",
-    "./node_modules/vue-tailwind-datepicker/**/*.js"
+    "./node_modules/vue-tailwind-datepicker/**/*.js",
   ],
   theme: {
     extend: {
       colors: {
-        'olg-blue': '#3a75a4',
+        primary: "#00B8AE",
+        "primary-light": "#E5F7F6",
         gray: {
-          25:  "#fafafa",
-          50:  "#f2f2f2",
+          25: "#fafafa",
+          50: "#f2f2f2",
           100: "#e6e6e6",
           200: "#cccccc",
           300: "#b3b3b3",
@@ -31,9 +32,10 @@ module.exports = {
         },
       },
       screens: {
-        'tablet': '768px',
-        'laptop': '1024px',
-        'desktop': '1280px',
+        mobile: "640px",
+        tablet: "768px",
+        laptop: "1024px",
+        desktop: "1280px",
       },
     },
   },
@@ -44,8 +46,8 @@ module.exports = {
     },
   },
   plugins: [
-    require('@tailwindcss/forms'),
-    require('tailwindcss/plugin')
+    require("@tailwindcss/forms"),
+    require("tailwindcss/plugin"),
     // plugin(function({ addUtilities }) {
     //   addUtilities({
     //     '.bg-green-striped': {
@@ -58,4 +60,4 @@ module.exports = {
     //   })
     // })
   ],
-}
+};

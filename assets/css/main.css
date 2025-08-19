@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+a {
+  transition: all 0.3s ease-in-out;
+}
+
 .bg-white {
   background-color: white;
 }
@@ -41,7 +45,8 @@
 }
 
 @keyframes pulse {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 1;
   }
   50% {
@@ -57,12 +62,16 @@
   animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
+.transition-el {
+  transition: all 0.3s ease-in-out;
+}
+
 /* Custom utilities */
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
-  
+
   .text-pretty {
     text-wrap: pretty;
   }

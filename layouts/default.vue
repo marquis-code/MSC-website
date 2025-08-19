@@ -1,7 +1,11 @@
+<script setup lang="ts">
+
+</script>
+
 <template>
   <div>
-    <NavbarSection />
+    <Nav />
     <NuxtPage />
-    <FooterSection />
+    <Footer />
   </div>
 </template>
