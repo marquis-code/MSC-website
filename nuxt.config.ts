@@ -8,7 +8,8 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      title: "OLGNova",
+      title:
+        "MSC -  Medical Supply Chain | Pharmaceutical Distribution Platform",
       htmlAttrs: { lang: "en" },
       meta: [
         { charset: "utf-8" },
@@ -16,20 +17,18 @@ export default defineNuxtConfig({
         { name: "format-detection", content: "telephone=no" },
         {
           name: "description",
-          content:
-            "OLGNova - Health research publications and resources for healthcare professionals in Africa",
+          content: "MSC - Pharmaceutical Distribution Platform",
         },
         {
           name: "keywords",
-          content:
-            "health research, publications, Africa, healthcare, medical research",
+          content: "Medical Supply Chain",
         },
-        { name: "author", content: "OLGNova" },
-        { property: "og:title", content: "OLGNova" },
+        { name: "author", content: "MSC" },
+        { property: "og:title", content: "MSC" },
         {
           property: "og:description",
           content:
-            "Health research publications and resources for healthcare professionals in Africa",
+            "Medical Supply Chain | Pharmaceutical Distribution Platform",
         },
         { property: "og:type", content: "website" },
         { property: "og:url", content: "https://olgnova.com" },
@@ -41,7 +40,7 @@ export default defineNuxtConfig({
         {
           name: "twitter:description",
           content:
-            "Health research publications and resources for healthcare professionals in Africa",
+            "Medical Supply Chain | Pharmaceutical Distribution Platform",
         },
         {
           name: "twitter:image",
@@ -52,19 +51,15 @@ export default defineNuxtConfig({
         { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
         { rel: "canonical", href: "https://olgova.com" },
         {
-          rel: 'stylesheet',
-          href: 'https://fonts.googleapis.com/css2?family=Lexend+Tera:wght@100..900&family=Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap'
-        }
+          rel: "stylesheet",
+          href: "https://fonts.googleapis.com/css2?family=Lexend+Tera:wght@100..900&family=Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap",
+        },
       ],
     },
     pageTransition: {
       name: "page",
       mode: "out-in",
     },
-  },
-
-  build: {
-    transpile: ["lucide-vue-next"],
   },
 
   // Remove problematic modules and keep only essential ones
