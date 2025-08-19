@@ -7,6 +7,7 @@ interface Props {
     variant?: 'primary' | 'secondary' | 'danger'
     disabled?: boolean
     class?: string
+    rounded?: boolean
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -14,12 +15,13 @@ const props = withDefaults(defineProps<Props>(), {
     type: 'button',
     variant: 'primary',
     disabled: false,
-    class: ''
+    class: '',
+    rounded: false
 })
 
 // 🎨 Base styles
 const baseClasses =
-    'px-3 py-1 rounded-md font-semibold focus:outline-none transition-colors transition-el duration-200 flex items-center justify-center'
+    'px-3 py-1 font-semibold focus:outline-none transition-colors transition-el duration-200 flex items-center justify-center'
 
 // 🔹 Variant styles
 const variantClasses = computed(() => {
@@ -38,7 +40,7 @@ const variantClasses = computed(() => {
     <div>
         <button :type="props.type" :disabled="props.disabled" :class="[
             baseClasses,
-            variantClasses,
+            variantClasses, props.rounded ? 'rounded-full' : 'rounded-md',
             props.disabled ? 'opacity-50 cursor-not-allowed' : '',
             props.class
         ]">
