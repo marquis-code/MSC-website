@@ -62,10 +62,6 @@ export default defineNuxtConfig({
     },
   },
 
-  build: {
-    transpile: ["lucide-vue-next"],
-  },
-
   // Remove problematic modules and keep only essential ones
   modules: ["@nuxtjs/tailwindcss", "@vueuse/nuxt"],
 
