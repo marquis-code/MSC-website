@@ -1,10 +1,10 @@
 <template>
     <div class="shadow py-4">
         <div class="w-10/12 mx-auto flex items-center justify-between">
-            <div class="flex items-center space-x-1">
+            <NuxtLink to="/" class="flex items-center space-x-1">
                 <img src="/assets/img/msc-logo.png" alt="" class="size-[30px]">
-                <NuxtLink to="/" class="font-bold text-primary text-2xl">MSC</NuxtLink>
-            </div>
+                <h3 class="font-bold text-primary text-2xl">MSC</h3>
+            </NuxtLink>
             <nav>
                 <ul class="flex items-center space-x-7">
                     <li v-for="route in useRoutes()" :key="route.path">

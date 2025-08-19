@@ -2,7 +2,7 @@
     <footer class="bg-[#202C3C] py-10">
         <div class="w-10/12 mx-auto ">
 
-            <div class="grid grid-cols-[30%_23.3%_23.3%_23.3%] gap-4 text-white">
+            <div class="grid grid-cols-3 gap-4 text-white">
                 <!-- MSC -->
                 <div>
                     <div class="flex items-center space-x-3">
@@ -37,12 +37,12 @@
                 </div>
 
                 <!-- Services -->
-                <div>
+                <!-- <div>
                     <h1 class="font-semibold text-lg mb-4">Services</h1>
                     <p v-for="service in services" class="text-white/80 mb-3">
                         {{ service }}
                     </p>
-                </div>
+                </div> -->
 
                 <!-- Contact Info -->
                 <div>
