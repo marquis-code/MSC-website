@@ -1,8 +1,6 @@
 import { defineNuxtConfig } from "nuxt/config";
 
 export default defineNuxtConfig({
-  // Force disable SSR since your original config had it as false
-  // This will prevent the SSR rendering errors
   ssr: false,
   target: "static",
   app: {
