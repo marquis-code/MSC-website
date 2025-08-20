@@ -158,12 +158,14 @@ const filteredProducts = computed(() => {
           </p>
 
           <!-- 🔹 Integrated AppButton -->
-          <Button class="mt-6 gap-2 transform hover:scale-105 transition-transform rounded-full px-5" rounded>
+          <UiButton class="mt-6 gap-2 transform hover:scale-105 transition-transform rounded-full px-5" rounded>
             Learn More
             <Icon icon="lets-icons:arrow-right-light" width="24" height="24" />
-          </Button>
+          </UiButton>
         </div>
       </SwiperSlide>
+
+
     </Swiper>
 
     <section id="why" class="w-10/12 mx-auto py-20">
@@ -202,91 +204,8 @@ const filteredProducts = computed(() => {
       </div>
     </section>
 
-    <section class="w-10/12 mx-auto py-16 bg-gradient-to-b from-background to-professional-gray/5">
-      <div class="container mx-auto px-4">
-        <!-- Header -->
-        <div class="text-center mb-12">
-          <div
-            class="inline-flex items-center px-3 py-1 rounded-full bg-healthcare-blue/10 text-healthcare-blue text-sm font-medium mb-4">
-            <Icon icon="mdi:package-variant" class="w-4 h-4 mr-2" />
-            Product Catalogue
-          </div>
-          <h2 class="text-3xl md:text-4xl font-bold mb-4">
-            Quality <span class="text-healthcare-blue">Pharmaceutical</span> Products
-          </h2>
-          <p class="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Browse our comprehensive range of verified pharmaceutical products available through our trusted distributor
-            network.
-          </p>
-        </div>
-
-        <!-- Search Bar -->
-        <div class="max-w-md mx-auto mb-8">
-          <div class="relative">
-            <Icon icon="mdi:magnify"
-              class="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-            <input type="text" placeholder="Looking for something specific? Type a drug name..." v-model="searchTerm"
-              class="pl-10 w-full border rounded-md px-3 py-2 text-sm focus:ring-2 focus:ring-primary focus:outline-none" />
-          </div>
-        </div>
-
-        <!-- Category Filter -->
-        <div class="flex flex-wrap justify-center gap-2 mb-8">
-          <button v-for="category in categories" :key="category" @click="selectedCategory = category" :class="[
-            'px-4 py-2 text-sm rounded-full border transition-all duration-200',
-            category === selectedCategory
-              ? 'bg-primary text-white border-primary'
-              : 'bg-white text-gray-600 border-gray-300 hover:bg-gray-100'
-          ]">
-            {{ category }}
-          </button>
-        </div>
-
-        <!-- Product Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-          <template v-if="filteredProducts.length > 0">
-            <div v-for="product in filteredProducts" :key="product.id"
-              class="group hover:shadow-xl transition-all duration-300 border border-border/50 hover:border-primary/30 rounded-lg overflow-hidden">
-              <div
-                class="aspect-square bg-gradient-to-br from-professional-gray/5 to-professional-gray/10 relative overflow-hidden group-hover:bg-primary-light/20 transition-all duration-500">
-                <img :src="product.image" :alt="product.name"
-                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-                <div
-                  class="absolute inset-0 bg-gradient-to-t from-primary-light/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </div>
-
-              <div class="p-4 space-y-2">
-                <h3
-                  class="font-semibold text-lg leading-tight text-foreground group-hover:text-primary transition-colors line-clamp-2">
-                  {{ product.name }}
-                </h3>
-                <p class="text-sm text-muted-foreground leading-relaxed line-clamp-2">
-                  {{ product.description }}
-                </p>
-              </div>
-            </div>
-          </template>
-
-          <template v-else>
-            <div class="col-span-full text-center py-16">
-              <div class="bg-professional-gray/20 rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-6">
-                <Icon icon="mdi:package-variant" class="h-12 w-12 text-muted-foreground" />
-              </div>
-              <h3 class="text-xl font-semibold text-foreground mb-2">No products found</h3>
-              <p class="text-muted-foreground">Try adjusting your search or category filter</p>
-            </div>
-          </template>
-        </div>
-
-        <!-- View All Button -->
-        <div class="text-center">
-          <NuxtLink to="/products"
-            class="inline-flex items-center px-6 py-3 bg-primary text-white rounded-lg hover:scale-105 transition-all duration-300">
-            View All Products
-            <Icon icon="mdi:package-variant" class="ml-2 h-5 w-5" />
-          </NuxtLink>
-        </div>
-      </div>
+    <section>
+      <LandingProductCatalogue />
     </section>
 
     <section>
