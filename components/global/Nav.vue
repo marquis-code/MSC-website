@@ -1,5 +1,5 @@
 <template>
-    <div class="shadow py-4">
+    <div class="shadow py-4 fixed z-[99999] w-full bg-white">
         <div class="w-10/12 mx-auto flex items-center justify-between">
             <NuxtLink to="/" class="flex items-center space-x-1">
                 <img src="/assets/img/msc-logo.png" alt="" class="size-[30px]">

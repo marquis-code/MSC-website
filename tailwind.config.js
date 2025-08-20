@@ -1,4 +1,4 @@
-const plugin = require("tailwindcss/plugin");
+// const plugin = require("tailwindcss/plugin");
 const colors = require("tailwindcss/colors");
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -29,6 +29,10 @@ module.exports = {
           800: "#333333",
           900: "#1a1a1a",
           925: "#0d0d0d",
+        },
+        muted: {
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))",
         },
       },
       screens: {

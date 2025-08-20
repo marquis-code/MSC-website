@@ -5,7 +5,7 @@
 <template>
   <div>
     <Nav />
-    <NuxtPage />
+    <NuxtPage class="pt-16" />
     <Footer />
   </div>
 </template>

@@ -24,7 +24,7 @@ const isFocused = ref(false)
 </script>
 
 <template>
-    <div class="flex items-center rounded-md border transition-all duration-200" :class="[
+    <div class="flex px-4 items-center rounded-md border transition-all duration-200" :class="[
         isFocused ? 'border-primary shadow-sm' : 'border-gray-300',
         props.class
     ]">
